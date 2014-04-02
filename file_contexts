@@ -152,6 +152,45 @@
 /system/bin/dnsmasq     u:object_r:dnsmasq_exec:s0
 /system/bin/hostapd     u:object_r:hostapd_exec:s0
 /system/bin/clatd	u:object_r:clatd_exec:s0
+
+# System1 files 
+# for dualboot recovery 
+/system1(/.*)?		u:object_r:system_file:s0
+/system1/bin/ash		u:object_r:shell_exec:s0
+/system1/bin/mksh	u:object_r:shell_exec:s0
+/system1/bin/sh		--	u:object_r:shell_exec:s0
+/system1/bin/run-as	--	u:object_r:runas_exec:s0
+/system1/bin/app_process	u:object_r:zygote_exec:s0
+/system1/bin/servicemanager	u:object_r:servicemanager_exec:s0
+/system1/bin/surfaceflinger	u:object_r:surfaceflinger_exec:s0
+/system1/bin/drmserver	u:object_r:drmserver_exec:s0
+/system1/bin/vold	u:object_r:vold_exec:s0
+/system1/bin/netd	u:object_r:netd_exec:s0
+/system1/bin/rild	u:object_r:rild_exec:s0
+/system1/bin/mediaserver	u:object_r:mediaserver_exec:s0
+/system1/bin/dbus-daemon	u:object_r:dbusd_exec:s0
+/system1/bin/installd	u:object_r:installd_exec:s0
+/system1/bin/keystore	u:object_r:keystore_exec:s0
+/system1/bin/debuggerd	u:object_r:debuggerd_exec:s0
+/system1/bin/bluetoothd	u:object_r:bluetoothd_exec:s0
+/system1/bin/wpa_supplicant	u:object_r:wpa_exec:s0
+/system1/bin/qemud	u:object_r:qemud_exec:s0
+/system1/bin/sdcard      u:object_r:sdcardd_exec:s0
+/system1/bin/dhcpcd      u:object_r:dhcp_exec:s0
+/system1/bin/mtpd	u:object_r:mtp_exec:s0
+/system1/bin/pppd	u:object_r:ppp_exec:s0
+/system1/bin/tf_daemon	u:object_r:tee_exec:s0
+/system1/bin/racoon	u:object_r:racoon_exec:s0
+/system1/etc/ppp(/.*)?	u:object_r:ppp_system_file:s0
+/system1/etc/dhcpcd(/.*)? u:object_r:dhcp_system_file:s0
+/system1/xbin/su		u:object_r:su_exec:s0
+/system1/vendor/bin/gpsd u:object_r:gpsd_exec:s0
+/system1/bin/ping    u:object_r:ping_exec:s0
+/system1/bin/dnsmasq     u:object_r:dnsmasq_exec:s0
+/system1/bin/hostapd     u:object_r:hostapd_exec:s0
+/system1/bin/clatd	u:object_r:clatd_exec:s0
+
+
 #############################
 # Vendor files
 #
